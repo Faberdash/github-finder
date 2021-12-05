@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const UserItem = ({userInfo: {login, avatar_url: avatar, html_url: url}}) => {
+const UserItem = ({ userInfo: { login, avatar_url: avatar } }) => {
 
         return (
             <div className="card text-center">
@@ -14,9 +15,9 @@ const UserItem = ({userInfo: {login, avatar_url: avatar, html_url: url}}) => {
                 <h3>{login}</h3>
 
                 <div>
-                    <a href={url} className="btn btn-dark btn-sm my-1">
+                    <Link to={`/users/${login}`} className="btn btn-dark btn-sm my-1">
                         More
-                    </a>
+                    </Link>
                 </div>
             </div>
         )

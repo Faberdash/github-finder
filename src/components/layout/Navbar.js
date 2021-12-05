@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { BsGithub } from 'react-icons/bs'
 import PropTypes from 'prop-types'
 
@@ -8,7 +9,15 @@ const Navbar = ({title}) => {
             <nav className="navbar bg-primary"> 
                <h2>
                     <BsGithub /> {title}
-               </h2> 
+               </h2>
+               <ul>
+                   <li>
+                       <Link to='/'>Home</Link>
+                   </li>
+                   <li>
+                       <Link to='/about'>About</Link>
+                   </li>
+               </ul> 
             </nav>
         )
 }
